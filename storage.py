@@ -8,7 +8,7 @@ NOTES_PATH = os.path.join(DATA_DIR, "notes.pkl")
 
 def save_all(contacts, notes):
     """Функція створює папку data та зберігає туди файли .pkl"""
-    # Якщо папки data немає — створюємо її
+    
     if not os.path.exists(DATA_DIR):
         os.makedirs(DATA_DIR)
         
@@ -26,7 +26,7 @@ def load_all():
     contacts = AddressBook()
     notes = NoteBook()
     
-    # Перевіряємо чи існують файли перед завантаженням
+    
     if os.path.exists(CONTACTS_PATH):
         with open(CONTACTS_PATH, "rb") as f:
             contacts = pickle.load(f)
